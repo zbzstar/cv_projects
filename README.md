@@ -8,13 +8,14 @@
 效果图
 ![效果图](https://github.com/zbzstar/pictures_markdown/raw/master/merge_baby.png)
 ### rice_count
-原图
-![目标图](https://github.com/zbzstar/pictures_markdown/raw/master/rice.jpeg)
-选择范围
-![目标图](https://github.com/zbzstar/pictures_markdown/raw/master/rice_select.jpg)
-剪切图
-![目标图](https://github.com/zbzstar/pictures_markdown/raw/master/rice_grabcut.jpg)
-morphology图
+
+原图  
+![目标图](https://github.com/zbzstar/pictures_markdown/raw/master/rice.jpeg)  
+选择范围  
+![目标图](https://github.com/zbzstar/pictures_markdown/raw/master/rice_select.jpg)  
+剪切图  
+![目标图](https://github.com/zbzstar/pictures_markdown/raw/master/rice_grabcut.jpg)  
+morphology图  
 ![目标图](https://github.com/zbzstar/pictures_markdown/raw/master/rice_morphology.jpg)
 ## compile depencies
 * Eigen3
