@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/zbz/opencv_test/homography/src/main.cpp" "/home/zbz/opencv_test/homography/cmake-build-debug/CMakeFiles/homography_test.dir/src/main.cpp.o"
+  "/home/zbz/opencv_test/cv_projects/src/main.cpp" "/home/zbz/opencv_test/cv_projects/cmake-build-debug/CMakeFiles/homography_test.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

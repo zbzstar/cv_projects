@@ -4,5 +4,5 @@ project(homography_test)
 set(CMAKE_CXX_STANDARD 11)
 
 find_package(OpenCV REQUIRED)
-add_executable(homography_test src/main.cpp)
+add_executable(homography_test src/homography_switch/main.cpp)
 target_link_libraries(homography_test ${OpenCV_LIBS})

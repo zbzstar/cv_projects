@@ -1,4 +1,4 @@
-# Install script for directory: /home/zbz/opencv_test/homography
+# Install script for directory: /home/zbz/opencv_test/cv_projects
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/zbz/opencv_test/homography/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/zbz/opencv_test/cv_projects/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

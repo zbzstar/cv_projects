@@ -1,3 +1,3 @@
-/home/zbz/opencv_test/homography/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/zbz/opencv_test/homography/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/zbz/opencv_test/homography/cmake-build-debug/CMakeFiles/homography_test.dir
+/home/zbz/opencv_test/cv_projects/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/zbz/opencv_test/cv_projects/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/zbz/opencv_test/cv_projects/cmake-build-debug/CMakeFiles/homography_test.dir
