@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/homography_test.dir/src/main.cpp.o"
+  "CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.o"
   "homography_test.pdb"
   "homography_test"
 )

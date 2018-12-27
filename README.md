@@ -1,4 +1,4 @@
-# homography_switch
+# homography_switch rice_count
 ## description
 ### homography_switch
 目标图
@@ -8,7 +8,14 @@
 效果图
 ![效果图](https://github.com/zbzstar/pictures_markdown/raw/master/merge_baby.png)
 ### rice_count
-
+原图
+![目标图](https://github.com/zbzstar/pictures_markdown/raw/master/rice.jpeg)
+选择范围
+![目标图](https://github.com/zbzstar/pictures_markdown/raw/master/rice_select.jpg)
+剪切图
+![目标图](https://github.com/zbzstar/pictures_markdown/raw/master/rice_grabcut.jpg)
+morphology图
+![目标图](https://github.com/zbzstar/pictures_markdown/raw/master/rice_morphology.jpg)
 ## compile depencies
 * Eigen3
 * opencv
@@ -23,7 +30,8 @@ make
 ```
 ./homography_switch
 ```
+选择要替换的位置的四个点（顺时针方向），回车后如效果图所示
 ```
 ./rice_count 
 ```
-选择要替换的位置的四个点（顺时针方向），回车后如效果图所示
+画出选择范围，按下“p”键，效果如果上图效果所示

@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/zbz/opencv_test/cv_projects/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/zbz/Downloads/clion-2018.1.6/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/home/zbz/Downloads/clion-2018.1.6/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named rice_count
+
+# Build rule for target.
+rice_count: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rice_count
+.PHONY : rice_count
+
+# fast build rule for target.
+rice_count/fast:
+	$(MAKE) -f CMakeFiles/rice_count.dir/build.make CMakeFiles/rice_count.dir/build
+.PHONY : rice_count/fast
+
+#=============================================================================
 # Target rules for targets named homography_test
 
 # Build rule for target.
@@ -123,32 +136,59 @@ homography_test/fast:
 	$(MAKE) -f CMakeFiles/homography_test.dir/build.make CMakeFiles/homography_test.dir/build
 .PHONY : homography_test/fast
 
-src/main.o: src/main.cpp.o
+src/homography_switch/main.o: src/homography_switch/main.cpp.o
 
-.PHONY : src/main.o
+.PHONY : src/homography_switch/main.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/homography_test.dir/build.make CMakeFiles/homography_test.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+src/homography_switch/main.cpp.o:
+	$(MAKE) -f CMakeFiles/homography_test.dir/build.make CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.o
+.PHONY : src/homography_switch/main.cpp.o
 
-src/main.i: src/main.cpp.i
+src/homography_switch/main.i: src/homography_switch/main.cpp.i
 
-.PHONY : src/main.i
+.PHONY : src/homography_switch/main.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/homography_test.dir/build.make CMakeFiles/homography_test.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+src/homography_switch/main.cpp.i:
+	$(MAKE) -f CMakeFiles/homography_test.dir/build.make CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.i
+.PHONY : src/homography_switch/main.cpp.i
 
-src/main.s: src/main.cpp.s
+src/homography_switch/main.s: src/homography_switch/main.cpp.s
 
-.PHONY : src/main.s
+.PHONY : src/homography_switch/main.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/homography_test.dir/build.make CMakeFiles/homography_test.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/homography_switch/main.cpp.s:
+	$(MAKE) -f CMakeFiles/homography_test.dir/build.make CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.s
+.PHONY : src/homography_switch/main.cpp.s
+
+src/rice_count/main.o: src/rice_count/main.cpp.o
+
+.PHONY : src/rice_count/main.o
+
+# target to build an object file
+src/rice_count/main.cpp.o:
+	$(MAKE) -f CMakeFiles/rice_count.dir/build.make CMakeFiles/rice_count.dir/src/rice_count/main.cpp.o
+.PHONY : src/rice_count/main.cpp.o
+
+src/rice_count/main.i: src/rice_count/main.cpp.i
+
+.PHONY : src/rice_count/main.i
+
+# target to preprocess a source file
+src/rice_count/main.cpp.i:
+	$(MAKE) -f CMakeFiles/rice_count.dir/build.make CMakeFiles/rice_count.dir/src/rice_count/main.cpp.i
+.PHONY : src/rice_count/main.cpp.i
+
+src/rice_count/main.s: src/rice_count/main.cpp.s
+
+.PHONY : src/rice_count/main.s
+
+# target to generate assembly for a file
+src/rice_count/main.cpp.s:
+	$(MAKE) -f CMakeFiles/rice_count.dir/build.make CMakeFiles/rice_count.dir/src/rice_count/main.cpp.s
+.PHONY : src/rice_count/main.cpp.s
 
 # Help Target
 help:
@@ -156,12 +196,16 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... rice_count"
 	@echo "... homography_test"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... src/homography_switch/main.o"
+	@echo "... src/homography_switch/main.i"
+	@echo "... src/homography_switch/main.s"
+	@echo "... src/rice_count/main.o"
+	@echo "... src/rice_count/main.i"
+	@echo "... src/rice_count/main.s"
 .PHONY : help
 
 

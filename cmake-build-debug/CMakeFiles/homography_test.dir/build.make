@@ -57,38 +57,38 @@ include CMakeFiles/homography_test.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/homography_test.dir/flags.make
 
-CMakeFiles/homography_test.dir/src/main.cpp.o: CMakeFiles/homography_test.dir/flags.make
-CMakeFiles/homography_test.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zbz/opencv_test/cv_projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/homography_test.dir/src/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/homography_test.dir/src/main.cpp.o -c /home/zbz/opencv_test/cv_projects/src/main.cpp
+CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.o: CMakeFiles/homography_test.dir/flags.make
+CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.o: ../src/homography_switch/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zbz/opencv_test/cv_projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.o -c /home/zbz/opencv_test/cv_projects/src/homography_switch/main.cpp
 
-CMakeFiles/homography_test.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/homography_test.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zbz/opencv_test/cv_projects/src/main.cpp > CMakeFiles/homography_test.dir/src/main.cpp.i
+CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zbz/opencv_test/cv_projects/src/homography_switch/main.cpp > CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.i
 
-CMakeFiles/homography_test.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/homography_test.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zbz/opencv_test/cv_projects/src/main.cpp -o CMakeFiles/homography_test.dir/src/main.cpp.s
+CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zbz/opencv_test/cv_projects/src/homography_switch/main.cpp -o CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.s
 
-CMakeFiles/homography_test.dir/src/main.cpp.o.requires:
+CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.o.requires:
 
-.PHONY : CMakeFiles/homography_test.dir/src/main.cpp.o.requires
+.PHONY : CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.o.requires
 
-CMakeFiles/homography_test.dir/src/main.cpp.o.provides: CMakeFiles/homography_test.dir/src/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/homography_test.dir/build.make CMakeFiles/homography_test.dir/src/main.cpp.o.provides.build
-.PHONY : CMakeFiles/homography_test.dir/src/main.cpp.o.provides
+CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.o.provides: CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/homography_test.dir/build.make CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.o.provides.build
+.PHONY : CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.o.provides
 
-CMakeFiles/homography_test.dir/src/main.cpp.o.provides.build: CMakeFiles/homography_test.dir/src/main.cpp.o
+CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.o.provides.build: CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.o
 
 
 # Object files for target homography_test
 homography_test_OBJECTS = \
-"CMakeFiles/homography_test.dir/src/main.cpp.o"
+"CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.o"
 
 # External object files for target homography_test
 homography_test_EXTERNAL_OBJECTS =
 
-homography_test: CMakeFiles/homography_test.dir/src/main.cpp.o
+homography_test: CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.o
 homography_test: CMakeFiles/homography_test.dir/build.make
 homography_test: /usr/local/lib/libopencv_dnn.so.3.3.0
 homography_test: /usr/local/lib/libopencv_ml.so.3.3.0
@@ -116,7 +116,7 @@ CMakeFiles/homography_test.dir/build: homography_test
 
 .PHONY : CMakeFiles/homography_test.dir/build
 
-CMakeFiles/homography_test.dir/requires: CMakeFiles/homography_test.dir/src/main.cpp.o.requires
+CMakeFiles/homography_test.dir/requires: CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.o.requires
 
 .PHONY : CMakeFiles/homography_test.dir/requires
 
