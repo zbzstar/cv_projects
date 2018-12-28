@@ -32,7 +32,7 @@ int main( int argc, char** argv)
 
     // Read in the image.
     //Mat im_src = imread("first-image.jpg");
-    Mat im_src = imread("../1.jpg");
+    Mat im_src = imread("../pictures/1.jpg");
     Size size = im_src.size();
    
     // Create a vector of points.

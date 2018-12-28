@@ -63,7 +63,7 @@ void onMouse(int event,int x,int y,int flags,void* param){
 
 
 int main(){
-    img = imread("../rice.jpeg",1);
+    img = imread("../pictures/rice.jpeg",1);
     img0 = img.clone();
     namedWindow("raw",1);
     imshow("raw", img);

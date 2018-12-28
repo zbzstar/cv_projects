@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/zbz/opencv_test/cv_projects/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/zbz/Downloads/clion-2018.1.6/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/home/zbz/Downloads/clion-2018.1.6/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named homography_test
+
+# Build rule for target.
+homography_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 homography_test
+.PHONY : homography_test
+
+# fast build rule for target.
+homography_test/fast:
+	$(MAKE) -f CMakeFiles/homography_test.dir/build.make CMakeFiles/homography_test.dir/build
+.PHONY : homography_test/fast
+
+#=============================================================================
 # Target rules for targets named rice_count
 
 # Build rule for target.
@@ -124,17 +137,44 @@ rice_count/fast:
 .PHONY : rice_count/fast
 
 #=============================================================================
-# Target rules for targets named homography_test
+# Target rules for targets named get_epipolar_line
 
 # Build rule for target.
-homography_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 homography_test
-.PHONY : homography_test
+get_epipolar_line: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 get_epipolar_line
+.PHONY : get_epipolar_line
 
 # fast build rule for target.
-homography_test/fast:
-	$(MAKE) -f CMakeFiles/homography_test.dir/build.make CMakeFiles/homography_test.dir/build
-.PHONY : homography_test/fast
+get_epipolar_line/fast:
+	$(MAKE) -f CMakeFiles/get_epipolar_line.dir/build.make CMakeFiles/get_epipolar_line.dir/build
+.PHONY : get_epipolar_line/fast
+
+src/epipolar/main.o: src/epipolar/main.cpp.o
+
+.PHONY : src/epipolar/main.o
+
+# target to build an object file
+src/epipolar/main.cpp.o:
+	$(MAKE) -f CMakeFiles/get_epipolar_line.dir/build.make CMakeFiles/get_epipolar_line.dir/src/epipolar/main.cpp.o
+.PHONY : src/epipolar/main.cpp.o
+
+src/epipolar/main.i: src/epipolar/main.cpp.i
+
+.PHONY : src/epipolar/main.i
+
+# target to preprocess a source file
+src/epipolar/main.cpp.i:
+	$(MAKE) -f CMakeFiles/get_epipolar_line.dir/build.make CMakeFiles/get_epipolar_line.dir/src/epipolar/main.cpp.i
+.PHONY : src/epipolar/main.cpp.i
+
+src/epipolar/main.s: src/epipolar/main.cpp.s
+
+.PHONY : src/epipolar/main.s
+
+# target to generate assembly for a file
+src/epipolar/main.cpp.s:
+	$(MAKE) -f CMakeFiles/get_epipolar_line.dir/build.make CMakeFiles/get_epipolar_line.dir/src/epipolar/main.cpp.s
+.PHONY : src/epipolar/main.cpp.s
 
 src/homography_switch/main.o: src/homography_switch/main.cpp.o
 
@@ -196,10 +236,14 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... rice_count"
 	@echo "... homography_test"
+	@echo "... rice_count"
+	@echo "... get_epipolar_line"
+	@echo "... edit_cache"
+	@echo "... src/epipolar/main.o"
+	@echo "... src/epipolar/main.i"
+	@echo "... src/epipolar/main.s"
 	@echo "... src/homography_switch/main.o"
 	@echo "... src/homography_switch/main.i"
 	@echo "... src/homography_switch/main.s"

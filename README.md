@@ -1,4 +1,4 @@
-# homography_switch rice_count
+# homography_switch(通过单应矩阵拼接图像) rice_count(通过局部范围像素值做滤极限波) get_epipolar_line(通过极线约束计算基础矩阵和极线)
 ## description
 ### homography_switch
 目标图
@@ -17,6 +17,10 @@
 ![目标图](https://github.com/zbzstar/pictures_markdown/raw/master/rice_grabcut.jpg)  
 morphology图  
 ![目标图](https://github.com/zbzstar/pictures_markdown/raw/master/rice_morphology.jpg)
+
+### get_epipolar_line
+![目标图](https://github.com/zbzstar/pictures_markdown/raw/master/epi1.jpg)
+![目标图](https://github.com/zbzstar/pictures_markdown/raw/master/epi2.jpg)
 ## compile depencies
 * Eigen3
 * opencv
