@@ -40,3 +40,7 @@ make
 ./rice_count 
 ```
 画出选择范围，按下“p”键，效果如果上图效果所示
+
+```
+./get_epipolar_line
+```

@@ -85,27 +85,42 @@ int main( int argc, char** argv )
     }
 
     // 请先计算基础矩阵并据此绘制出前10个匹配点对应的对极线，可以调用opencv函数
-    // ----------- 开始你的代码 --------------//
-    Mat F = findFundamentalMat(pts1, pts2, CV_FM_8POINT);
-    std::vector<Vec<float, 3>> epilines1, epilines2;
-    //计算对应点的外极线epilines是一个三元组(a,b,c)，表示点在另一视图中对应的外极线ax+by+c=0;
-    computeCorrespondEpilines(pts1, 1, F, epilines1);
-    computeCorrespondEpilines(pts2, 2, F, epilines2);
-
-    RNG rng;
-    for (uint i = 0; i < 10; i++)
+//    // ----------- 开始你的代码 --------------//
+//    Mat F = findFundamentalMat(pts1, pts2, CV_FM_8POINT);
+//    std::vector<Vec<float, 3>> epilines1, epilines2;
+//    //计算对应点的外极线epilines是一个三元组(a,b,c)，表示点在另一视图中对应的外极线ax+by+c=0;
+//    computeCorrespondEpilines(pts1, 1, F, epilines1);
+//    computeCorrespondEpilines(pts2, 2, F, epilines2);
+//
+//    RNG rng;
+//    for (uint i = 0; i < 10; i++)
+//    {
+//        Scalar color = Scalar(rng(256), rng(256), rng(256));//随机产生颜色
+//
+//        //在视图2中把关键点用圆圈画出来，然后再绘制在对应点处的外极线
+//        circle(rgb2, pts2[i], 3, color, 2,CV_AA);
+//
+//        line(rgb2, Point(0, -epilines1[i][2] / epilines1[i][1]), Point(rgb2.cols, -(epilines1[i][2] + epilines1[i][0] * rgb2.cols) / epilines1[i][1]), color);
+//
+//        //绘制外极线的时候，选择两个点，一个是x=0处的点，一个是x为图片宽度处
+//        circle(rgb1, pts1[i], 3, color, 2);
+//        line(rgb1, Point(0, -epilines2[i][2] / epilines2[i][1]), Point(rgb1.cols, -(epilines2[i][2] + epilines2[i][0] * rgb1.cols) / epilines2[i][1]), color);
+//
+//    }
+    Mat fundamental_matrix = findFundamentalMat(pts1, pts2, CV_FM_8POINT);
+    std::vector<cv::Vec<float, 3>> epilines1, epilines2;
+    cv::computeCorrespondEpilines(pts1, 1, fundamental_matrix, epilines1);
+    cv::computeCorrespondEpilines(pts2, 2, fundamental_matrix, epilines2);
+    cv::RNG &rng = theRNG();
+    for (int i = 0; i < 10; ++i)
     {
-        Scalar color = Scalar(rng(256), rng(256), rng(256));//随机产生颜色
+        Scalar color = Scalar(rng(255),rng(255),rng(255));
+        circle(rgb1,pts1[i],5,color,3);
 
-        //在视图2中把关键点用圆圈画出来，然后再绘制在对应点处的外极线
-        circle(rgb2, pts2[i], 3, color, 2,CV_AA);
+        cv::line(rgb1,cv::Point(0,-epilines2[i][2]/epilines2[i][1]),cv::Point(rgb1.cols,-(epilines2[i][2] + epilines2[i][0] * rgb1.cols)/epilines2[i][1]),color);
 
-        line(rgb2, Point(0, -epilines1[i][2] / epilines1[i][1]), Point(rgb2.cols, -(epilines1[i][2] + epilines1[i][0] * rgb2.cols) / epilines1[i][1]), color);
-
-        //绘制外极线的时候，选择两个点，一个是x=0处的点，一个是x为图片宽度处
-        circle(rgb1, pts1[i], 3, color, 2);
-        line(rgb1, Point(0, -epilines2[i][2] / epilines2[i][1]), Point(rgb1.cols, -(epilines2[i][2] + epilines2[i][0] * rgb1.cols) / epilines2[i][1]), color);
-
+        circle(rgb2,pts2[i],5,color,3);
+        cv::line(rgb2,cv::Point(0,-epilines1[i][2]/epilines1[i][1]),cv::Point(rgb2.cols,-(epilines1[i][2] + epilines1[i][0] * rgb2.cols)/epilines1[i][1]),color);
     }
     // ----------- 结束你的代码 --------------//
     imshow("epiline1", rgb2);
