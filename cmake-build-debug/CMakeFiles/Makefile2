@@ -103,7 +103,7 @@ clean: CMakeFiles/homography_test.dir/clean
 CMakeFiles/rice_count.dir/all:
 	$(MAKE) -f CMakeFiles/rice_count.dir/build.make CMakeFiles/rice_count.dir/depend
 	$(MAKE) -f CMakeFiles/rice_count.dir/build.make CMakeFiles/rice_count.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zbz/opencv_test/cv_projects/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target rice_count"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zbz/opencv_test/cv_projects/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target rice_count"
 .PHONY : CMakeFiles/rice_count.dir/all
 
 # Include target in all.
@@ -130,6 +130,43 @@ CMakeFiles/rice_count.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/rice_count.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/pointCloudFusion.dir
+
+# All Build rule for target.
+CMakeFiles/pointCloudFusion.dir/all: CMakeFiles/slambase_shared.dir/all
+	$(MAKE) -f CMakeFiles/pointCloudFusion.dir/build.make CMakeFiles/pointCloudFusion.dir/depend
+	$(MAKE) -f CMakeFiles/pointCloudFusion.dir/build.make CMakeFiles/pointCloudFusion.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zbz/opencv_test/cv_projects/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target pointCloudFusion"
+.PHONY : CMakeFiles/pointCloudFusion.dir/all
+
+# Include target in all.
+all: CMakeFiles/pointCloudFusion.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/pointCloudFusion.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zbz/opencv_test/cv_projects/cmake-build-debug/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pointCloudFusion.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zbz/opencv_test/cv_projects/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/pointCloudFusion.dir/rule
+
+# Convenience name for target.
+pointCloudFusion: CMakeFiles/pointCloudFusion.dir/rule
+
+.PHONY : pointCloudFusion
+
+# clean rule for target.
+CMakeFiles/pointCloudFusion.dir/clean:
+	$(MAKE) -f CMakeFiles/pointCloudFusion.dir/build.make CMakeFiles/pointCloudFusion.dir/clean
+.PHONY : CMakeFiles/pointCloudFusion.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/pointCloudFusion.dir/clean
 
 .PHONY : clean
 
@@ -167,6 +204,43 @@ CMakeFiles/get_epipolar_line.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/get_epipolar_line.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/slambase_shared.dir
+
+# All Build rule for target.
+CMakeFiles/slambase_shared.dir/all:
+	$(MAKE) -f CMakeFiles/slambase_shared.dir/build.make CMakeFiles/slambase_shared.dir/depend
+	$(MAKE) -f CMakeFiles/slambase_shared.dir/build.make CMakeFiles/slambase_shared.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zbz/opencv_test/cv_projects/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target slambase_shared"
+.PHONY : CMakeFiles/slambase_shared.dir/all
+
+# Include target in all.
+all: CMakeFiles/slambase_shared.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/slambase_shared.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zbz/opencv_test/cv_projects/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/slambase_shared.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zbz/opencv_test/cv_projects/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/slambase_shared.dir/rule
+
+# Convenience name for target.
+slambase_shared: CMakeFiles/slambase_shared.dir/rule
+
+.PHONY : slambase_shared
+
+# clean rule for target.
+CMakeFiles/slambase_shared.dir/clean:
+	$(MAKE) -f CMakeFiles/slambase_shared.dir/build.make CMakeFiles/slambase_shared.dir/clean
+.PHONY : CMakeFiles/slambase_shared.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/slambase_shared.dir/clean
 
 .PHONY : clean
 

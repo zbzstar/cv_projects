@@ -46,7 +46,7 @@ int main( int argc, char** argv)
 
     // Destination image
     //Mat im_dst = imread("times-square.jpg");
-    Mat im_dst = imread("../12.jpg");
+    Mat im_dst = imread("../pictures/12.jpg");
 
     
     // Set data for mouse handler

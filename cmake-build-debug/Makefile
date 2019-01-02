@@ -137,6 +137,19 @@ rice_count/fast:
 .PHONY : rice_count/fast
 
 #=============================================================================
+# Target rules for targets named pointCloudFusion
+
+# Build rule for target.
+pointCloudFusion: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pointCloudFusion
+.PHONY : pointCloudFusion
+
+# fast build rule for target.
+pointCloudFusion/fast:
+	$(MAKE) -f CMakeFiles/pointCloudFusion.dir/build.make CMakeFiles/pointCloudFusion.dir/build
+.PHONY : pointCloudFusion/fast
+
+#=============================================================================
 # Target rules for targets named get_epipolar_line
 
 # Build rule for target.
@@ -148,6 +161,19 @@ get_epipolar_line: cmake_check_build_system
 get_epipolar_line/fast:
 	$(MAKE) -f CMakeFiles/get_epipolar_line.dir/build.make CMakeFiles/get_epipolar_line.dir/build
 .PHONY : get_epipolar_line/fast
+
+#=============================================================================
+# Target rules for targets named slambase_shared
+
+# Build rule for target.
+slambase_shared: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 slambase_shared
+.PHONY : slambase_shared
+
+# fast build rule for target.
+slambase_shared/fast:
+	$(MAKE) -f CMakeFiles/slambase_shared.dir/build.make CMakeFiles/slambase_shared.dir/build
+.PHONY : slambase_shared/fast
 
 src/epipolar/main.o: src/epipolar/main.cpp.o
 
@@ -203,6 +229,60 @@ src/homography_switch/main.cpp.s:
 	$(MAKE) -f CMakeFiles/homography_test.dir/build.make CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.s
 .PHONY : src/homography_switch/main.cpp.s
 
+src/point_cloud_fusion/pointCloudFusion.o: src/point_cloud_fusion/pointCloudFusion.cpp.o
+
+.PHONY : src/point_cloud_fusion/pointCloudFusion.o
+
+# target to build an object file
+src/point_cloud_fusion/pointCloudFusion.cpp.o:
+	$(MAKE) -f CMakeFiles/pointCloudFusion.dir/build.make CMakeFiles/pointCloudFusion.dir/src/point_cloud_fusion/pointCloudFusion.cpp.o
+.PHONY : src/point_cloud_fusion/pointCloudFusion.cpp.o
+
+src/point_cloud_fusion/pointCloudFusion.i: src/point_cloud_fusion/pointCloudFusion.cpp.i
+
+.PHONY : src/point_cloud_fusion/pointCloudFusion.i
+
+# target to preprocess a source file
+src/point_cloud_fusion/pointCloudFusion.cpp.i:
+	$(MAKE) -f CMakeFiles/pointCloudFusion.dir/build.make CMakeFiles/pointCloudFusion.dir/src/point_cloud_fusion/pointCloudFusion.cpp.i
+.PHONY : src/point_cloud_fusion/pointCloudFusion.cpp.i
+
+src/point_cloud_fusion/pointCloudFusion.s: src/point_cloud_fusion/pointCloudFusion.cpp.s
+
+.PHONY : src/point_cloud_fusion/pointCloudFusion.s
+
+# target to generate assembly for a file
+src/point_cloud_fusion/pointCloudFusion.cpp.s:
+	$(MAKE) -f CMakeFiles/pointCloudFusion.dir/build.make CMakeFiles/pointCloudFusion.dir/src/point_cloud_fusion/pointCloudFusion.cpp.s
+.PHONY : src/point_cloud_fusion/pointCloudFusion.cpp.s
+
+src/point_cloud_fusion/slamBase.o: src/point_cloud_fusion/slamBase.cpp.o
+
+.PHONY : src/point_cloud_fusion/slamBase.o
+
+# target to build an object file
+src/point_cloud_fusion/slamBase.cpp.o:
+	$(MAKE) -f CMakeFiles/slambase_shared.dir/build.make CMakeFiles/slambase_shared.dir/src/point_cloud_fusion/slamBase.cpp.o
+.PHONY : src/point_cloud_fusion/slamBase.cpp.o
+
+src/point_cloud_fusion/slamBase.i: src/point_cloud_fusion/slamBase.cpp.i
+
+.PHONY : src/point_cloud_fusion/slamBase.i
+
+# target to preprocess a source file
+src/point_cloud_fusion/slamBase.cpp.i:
+	$(MAKE) -f CMakeFiles/slambase_shared.dir/build.make CMakeFiles/slambase_shared.dir/src/point_cloud_fusion/slamBase.cpp.i
+.PHONY : src/point_cloud_fusion/slamBase.cpp.i
+
+src/point_cloud_fusion/slamBase.s: src/point_cloud_fusion/slamBase.cpp.s
+
+.PHONY : src/point_cloud_fusion/slamBase.s
+
+# target to generate assembly for a file
+src/point_cloud_fusion/slamBase.cpp.s:
+	$(MAKE) -f CMakeFiles/slambase_shared.dir/build.make CMakeFiles/slambase_shared.dir/src/point_cloud_fusion/slamBase.cpp.s
+.PHONY : src/point_cloud_fusion/slamBase.cpp.s
+
 src/rice_count/main.o: src/rice_count/main.cpp.o
 
 .PHONY : src/rice_count/main.o
@@ -237,16 +317,24 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... homography_test"
 	@echo "... rice_count"
+	@echo "... pointCloudFusion"
 	@echo "... get_epipolar_line"
-	@echo "... edit_cache"
+	@echo "... slambase_shared"
 	@echo "... src/epipolar/main.o"
 	@echo "... src/epipolar/main.i"
 	@echo "... src/epipolar/main.s"
 	@echo "... src/homography_switch/main.o"
 	@echo "... src/homography_switch/main.i"
 	@echo "... src/homography_switch/main.s"
+	@echo "... src/point_cloud_fusion/pointCloudFusion.o"
+	@echo "... src/point_cloud_fusion/pointCloudFusion.i"
+	@echo "... src/point_cloud_fusion/pointCloudFusion.s"
+	@echo "... src/point_cloud_fusion/slamBase.o"
+	@echo "... src/point_cloud_fusion/slamBase.i"
+	@echo "... src/point_cloud_fusion/slamBase.s"
 	@echo "... src/rice_count/main.o"
 	@echo "... src/rice_count/main.i"
 	@echo "... src/rice_count/main.s"
