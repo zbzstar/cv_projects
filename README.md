@@ -1,4 +1,4 @@
-# homography_switch(通过单应矩阵拼接图像) rice_count(通过局部范围像素值做滤极限波) get_epipolar_line(通过极线约束计算基础矩阵和极线)
+# homography_switch(通过单应矩阵拼接图像) rice_count(通过局部范围像素值做滤极限波) get_epipolar_line(通过极线约束计算基础矩阵和极线) barcode(获取条形码)
 ## description
 ### homography_switch
 目标图
