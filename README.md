@@ -24,6 +24,7 @@ morphology图
 ## compile depencies
 * Eigen3
 * opencv
+* zbar(sudo apt-get install libzbar-dev)
 ## compile
 ```css
 mkdir build

@@ -263,6 +263,9 @@ FLANN_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a
 //Path to a library.
 FLANN_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a
 
+//The directory containing a CMake configuration file for FindZBar0.cmake.
+FindZBar0.cmake_DIR:PATH=FindZBar0.cmake_DIR-NOTFOUND
+
 //Path to a file.
 LIBUSB_1_INCLUDE_DIR:PATH=/usr/include
 
@@ -490,6 +493,21 @@ Qt5Network_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Network
 
 //The directory containing a CMake configuration file for Qt5WebKit.
 Qt5WebKit_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5WebKit
+
+//The directory containing a CMake configuration file for ZBAR.
+ZBAR_DIR:PATH=ZBAR_DIR-NOTFOUND
+
+//Path to a file.
+ZBAR_INCLUDE_DIR:PATH=/usr/include/zbar
+
+//Path to a library.
+ZBAR_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libzbar.so
+
+//The directory containing a CMake configuration file for ZBar0.
+ZBar0_DIR:PATH=ZBar0_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for ZBar.
+ZBar_DIR:PATH=ZBar_DIR-NOTFOUND
 
 //Value Computed by CMake
 homography_test_BINARY_DIR:STATIC=/home/zbz/opencv_test/cv_projects/cmake-build-debug
@@ -748,8 +766,12 @@ FIND_PACKAGE_MESSAGE_DETAILS_PCL_SURFACE:INTERNAL=[/usr/lib/x86_64-linux-gnu/lib
 FIND_PACKAGE_MESSAGE_DETAILS_PCL_TRACKING:INTERNAL=[/usr/lib/x86_64-linux-gnu/libpcl_tracking.so][/usr/include/pcl-1.7][v()]
 //Details about finding PCL_VISUALIZATION
 FIND_PACKAGE_MESSAGE_DETAILS_PCL_VISUALIZATION:INTERNAL=[/usr/lib/x86_64-linux-gnu/libpcl_visualization.so][/usr/include/pcl-1.7][v()]
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.1()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//Details about finding ZBAR
+FIND_PACKAGE_MESSAGE_DETAILS_ZBAR:INTERNAL=[/usr/lib/x86_64-linux-gnu/libzbar.so][/usr/include/zbar][v()]
 //Details about finding eigen
 FIND_PACKAGE_MESSAGE_DETAILS_eigen:INTERNAL=[/usr/include/eigen3][v()]
 //Details about finding libusb-1.0
@@ -962,6 +984,40 @@ PC_OPENNI_libopenni_INCLUDEDIR:INTERNAL=
 PC_OPENNI_libopenni_LIBDIR:INTERNAL=
 PC_OPENNI_libopenni_PREFIX:INTERNAL=
 PC_OPENNI_libopenni_VERSION:INTERNAL=
+PC_ZBAR_CFLAGS:INTERNAL=
+PC_ZBAR_CFLAGS_I:INTERNAL=
+PC_ZBAR_CFLAGS_OTHER:INTERNAL=
+PC_ZBAR_FOUND:INTERNAL=1
+PC_ZBAR_INCLUDEDIR:INTERNAL=/usr/include
+PC_ZBAR_INCLUDE_DIRS:INTERNAL=
+PC_ZBAR_LDFLAGS:INTERNAL=-lzbar
+PC_ZBAR_LDFLAGS_OTHER:INTERNAL=
+PC_ZBAR_LIBDIR:INTERNAL=/usr/lib
+PC_ZBAR_LIBRARIES:INTERNAL=zbar
+PC_ZBAR_LIBRARY_DIRS:INTERNAL=
+PC_ZBAR_LIBS:INTERNAL=
+PC_ZBAR_LIBS_L:INTERNAL=
+PC_ZBAR_LIBS_OTHER:INTERNAL=
+PC_ZBAR_LIBS_PATHS:INTERNAL=
+PC_ZBAR_PREFIX:INTERNAL=/usr
+PC_ZBAR_STATIC_CFLAGS:INTERNAL=
+PC_ZBAR_STATIC_CFLAGS_I:INTERNAL=
+PC_ZBAR_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_ZBAR_STATIC_INCLUDE_DIRS:INTERNAL=
+PC_ZBAR_STATIC_LDFLAGS:INTERNAL=-lzbar
+PC_ZBAR_STATIC_LDFLAGS_OTHER:INTERNAL=
+PC_ZBAR_STATIC_LIBDIR:INTERNAL=
+PC_ZBAR_STATIC_LIBRARIES:INTERNAL=zbar
+PC_ZBAR_STATIC_LIBRARY_DIRS:INTERNAL=
+PC_ZBAR_STATIC_LIBS:INTERNAL=
+PC_ZBAR_STATIC_LIBS_L:INTERNAL=
+PC_ZBAR_STATIC_LIBS_OTHER:INTERNAL=
+PC_ZBAR_STATIC_LIBS_PATHS:INTERNAL=
+PC_ZBAR_VERSION:INTERNAL=0.10
+PC_ZBAR_zbar_INCLUDEDIR:INTERNAL=
+PC_ZBAR_zbar_LIBDIR:INTERNAL=
+PC_ZBAR_zbar_PREFIX:INTERNAL=
+PC_ZBAR_zbar_VERSION:INTERNAL=
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ProcessorCount_cmd_getconf
@@ -988,9 +1044,11 @@ __pkg_config_arguments_PC_EIGEN:INTERNAL=eigen3
 __pkg_config_arguments_PC_FLANN:INTERNAL=flann
 __pkg_config_arguments_PC_OPENNI:INTERNAL=libopenni
 __pkg_config_arguments_PC_OPENNI2:INTERNAL=libopenni2
+__pkg_config_arguments_PC_ZBAR:INTERNAL=QUIET;zbar
 __pkg_config_checked_PC_EIGEN:INTERNAL=1
 __pkg_config_checked_PC_FLANN:INTERNAL=1
 __pkg_config_checked_PC_OPENNI:INTERNAL=1
 __pkg_config_checked_PC_OPENNI2:INTERNAL=1
+__pkg_config_checked_PC_ZBAR:INTERNAL=1
 prefix_result:INTERNAL=/usr/lib
 

@@ -36,6 +36,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/zbz/Downloads/clion-2018.1.6/bin/cmake/share/cmake-3.10/Modules/Platform/UnixPaths.cmake"
   "/home/zbz/Downloads/clion-2018.1.6/bin/cmake/share/cmake-3.10/Modules/ProcessorCount.cmake"
   "../CMakeLists.txt"
+  "../FindZBar0.cmake"
   "CMakeFiles/3.10.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.10.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.10.3/CMakeSystem.cmake"
@@ -249,6 +250,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/barcard.dir/DependInfo.cmake"
   "CMakeFiles/homography_test.dir/DependInfo.cmake"
   "CMakeFiles/rice_count.dir/DependInfo.cmake"
   "CMakeFiles/pointCloudFusion.dir/DependInfo.cmake"

@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named barcard
+
+# Build rule for target.
+barcard: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 barcard
+.PHONY : barcard
+
+# fast build rule for target.
+barcard/fast:
+	$(MAKE) -f CMakeFiles/barcard.dir/build.make CMakeFiles/barcard.dir/build
+.PHONY : barcard/fast
+
+#=============================================================================
 # Target rules for targets named homography_test
 
 # Build rule for target.
@@ -174,6 +187,33 @@ slambase_shared: cmake_check_build_system
 slambase_shared/fast:
 	$(MAKE) -f CMakeFiles/slambase_shared.dir/build.make CMakeFiles/slambase_shared.dir/build
 .PHONY : slambase_shared/fast
+
+src/barcode/barcard.o: src/barcode/barcard.cpp.o
+
+.PHONY : src/barcode/barcard.o
+
+# target to build an object file
+src/barcode/barcard.cpp.o:
+	$(MAKE) -f CMakeFiles/barcard.dir/build.make CMakeFiles/barcard.dir/src/barcode/barcard.cpp.o
+.PHONY : src/barcode/barcard.cpp.o
+
+src/barcode/barcard.i: src/barcode/barcard.cpp.i
+
+.PHONY : src/barcode/barcard.i
+
+# target to preprocess a source file
+src/barcode/barcard.cpp.i:
+	$(MAKE) -f CMakeFiles/barcard.dir/build.make CMakeFiles/barcard.dir/src/barcode/barcard.cpp.i
+.PHONY : src/barcode/barcard.cpp.i
+
+src/barcode/barcard.s: src/barcode/barcard.cpp.s
+
+.PHONY : src/barcode/barcard.s
+
+# target to generate assembly for a file
+src/barcode/barcard.cpp.s:
+	$(MAKE) -f CMakeFiles/barcard.dir/build.make CMakeFiles/barcard.dir/src/barcode/barcard.cpp.s
+.PHONY : src/barcode/barcard.cpp.s
 
 src/epipolar/main.o: src/epipolar/main.cpp.o
 
@@ -318,11 +358,15 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... barcard"
 	@echo "... homography_test"
 	@echo "... rice_count"
 	@echo "... pointCloudFusion"
 	@echo "... get_epipolar_line"
 	@echo "... slambase_shared"
+	@echo "... src/barcode/barcard.o"
+	@echo "... src/barcode/barcard.i"
+	@echo "... src/barcode/barcard.s"
 	@echo "... src/epipolar/main.o"
 	@echo "... src/epipolar/main.i"
 	@echo "... src/epipolar/main.s"
