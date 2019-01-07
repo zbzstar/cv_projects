@@ -45,3 +45,7 @@ make
 ```
 ./get_epipolar_line
 ```
+
+```
+./barcard 
+```
