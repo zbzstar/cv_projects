@@ -19,6 +19,9 @@ find_package (ZBar0)
 add_executable(homography_test src/homography_switch/main.cpp)
 target_link_libraries(homography_test ${OpenCV_LIBS})
 
+add_executable(re_homography_test src/homography_switch/re_homo.cpp)
+target_link_libraries(re_homography_test ${OpenCV_LIBS})
+
 add_executable(rice_count src/rice_count/main.cpp)
 target_link_libraries(rice_count ${OpenCV_LIBS})
 

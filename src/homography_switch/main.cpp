@@ -66,6 +66,7 @@ int main( int argc, char** argv)
     
 
     Mat Homography = findHomography(pts_src,data.points);
+//      Mat Homography = findHomography(data.points,pts_src);
 
     //用H对原图做变换
     warpPerspective(im_src,im_temp,Homography,im_temp.size());

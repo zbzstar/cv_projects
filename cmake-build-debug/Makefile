@@ -137,17 +137,17 @@ homography_test/fast:
 .PHONY : homography_test/fast
 
 #=============================================================================
-# Target rules for targets named rice_count
+# Target rules for targets named re_homography_test
 
 # Build rule for target.
-rice_count: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rice_count
-.PHONY : rice_count
+re_homography_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 re_homography_test
+.PHONY : re_homography_test
 
 # fast build rule for target.
-rice_count/fast:
-	$(MAKE) -f CMakeFiles/rice_count.dir/build.make CMakeFiles/rice_count.dir/build
-.PHONY : rice_count/fast
+re_homography_test/fast:
+	$(MAKE) -f CMakeFiles/re_homography_test.dir/build.make CMakeFiles/re_homography_test.dir/build
+.PHONY : re_homography_test/fast
 
 #=============================================================================
 # Target rules for targets named pointCloudFusion
@@ -163,6 +163,19 @@ pointCloudFusion/fast:
 .PHONY : pointCloudFusion/fast
 
 #=============================================================================
+# Target rules for targets named slambase_shared
+
+# Build rule for target.
+slambase_shared: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 slambase_shared
+.PHONY : slambase_shared
+
+# fast build rule for target.
+slambase_shared/fast:
+	$(MAKE) -f CMakeFiles/slambase_shared.dir/build.make CMakeFiles/slambase_shared.dir/build
+.PHONY : slambase_shared/fast
+
+#=============================================================================
 # Target rules for targets named get_epipolar_line
 
 # Build rule for target.
@@ -176,17 +189,17 @@ get_epipolar_line/fast:
 .PHONY : get_epipolar_line/fast
 
 #=============================================================================
-# Target rules for targets named slambase_shared
+# Target rules for targets named rice_count
 
 # Build rule for target.
-slambase_shared: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 slambase_shared
-.PHONY : slambase_shared
+rice_count: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rice_count
+.PHONY : rice_count
 
 # fast build rule for target.
-slambase_shared/fast:
-	$(MAKE) -f CMakeFiles/slambase_shared.dir/build.make CMakeFiles/slambase_shared.dir/build
-.PHONY : slambase_shared/fast
+rice_count/fast:
+	$(MAKE) -f CMakeFiles/rice_count.dir/build.make CMakeFiles/rice_count.dir/build
+.PHONY : rice_count/fast
 
 src/barcode/barcard.o: src/barcode/barcard.cpp.o
 
@@ -268,6 +281,33 @@ src/homography_switch/main.s: src/homography_switch/main.cpp.s
 src/homography_switch/main.cpp.s:
 	$(MAKE) -f CMakeFiles/homography_test.dir/build.make CMakeFiles/homography_test.dir/src/homography_switch/main.cpp.s
 .PHONY : src/homography_switch/main.cpp.s
+
+src/homography_switch/re_homo.o: src/homography_switch/re_homo.cpp.o
+
+.PHONY : src/homography_switch/re_homo.o
+
+# target to build an object file
+src/homography_switch/re_homo.cpp.o:
+	$(MAKE) -f CMakeFiles/re_homography_test.dir/build.make CMakeFiles/re_homography_test.dir/src/homography_switch/re_homo.cpp.o
+.PHONY : src/homography_switch/re_homo.cpp.o
+
+src/homography_switch/re_homo.i: src/homography_switch/re_homo.cpp.i
+
+.PHONY : src/homography_switch/re_homo.i
+
+# target to preprocess a source file
+src/homography_switch/re_homo.cpp.i:
+	$(MAKE) -f CMakeFiles/re_homography_test.dir/build.make CMakeFiles/re_homography_test.dir/src/homography_switch/re_homo.cpp.i
+.PHONY : src/homography_switch/re_homo.cpp.i
+
+src/homography_switch/re_homo.s: src/homography_switch/re_homo.cpp.s
+
+.PHONY : src/homography_switch/re_homo.s
+
+# target to generate assembly for a file
+src/homography_switch/re_homo.cpp.s:
+	$(MAKE) -f CMakeFiles/re_homography_test.dir/build.make CMakeFiles/re_homography_test.dir/src/homography_switch/re_homo.cpp.s
+.PHONY : src/homography_switch/re_homo.cpp.s
 
 src/point_cloud_fusion/pointCloudFusion.o: src/point_cloud_fusion/pointCloudFusion.cpp.o
 
@@ -360,10 +400,11 @@ help:
 	@echo "... edit_cache"
 	@echo "... barcard"
 	@echo "... homography_test"
-	@echo "... rice_count"
+	@echo "... re_homography_test"
 	@echo "... pointCloudFusion"
-	@echo "... get_epipolar_line"
 	@echo "... slambase_shared"
+	@echo "... get_epipolar_line"
+	@echo "... rice_count"
 	@echo "... src/barcode/barcard.o"
 	@echo "... src/barcode/barcard.i"
 	@echo "... src/barcode/barcard.s"
@@ -373,6 +414,9 @@ help:
 	@echo "... src/homography_switch/main.o"
 	@echo "... src/homography_switch/main.i"
 	@echo "... src/homography_switch/main.s"
+	@echo "... src/homography_switch/re_homo.o"
+	@echo "... src/homography_switch/re_homo.i"
+	@echo "... src/homography_switch/re_homo.s"
 	@echo "... src/point_cloud_fusion/pointCloudFusion.o"
 	@echo "... src/point_cloud_fusion/pointCloudFusion.i"
 	@echo "... src/point_cloud_fusion/pointCloudFusion.s"
